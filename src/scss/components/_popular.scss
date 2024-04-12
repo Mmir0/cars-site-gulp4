@@ -1,0 +1,51 @@
+.popular {
+  &__container {
+    margin-bottom: 79px;
+
+  }
+
+  &__card {
+    @include mobile {
+      grid-column: 6 span ;
+    }
+  }
+    &__gallery {
+      display: flex;
+      gap: 30px;
+      @include mobile {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 15px;
+      }
+    }
+    &__title {
+      margin: 0;
+      padding: 0 0 27px 0;
+    }
+    &__bg {
+      height: 198px;
+      position: relative;
+    }
+    &__bg-one {
+      background-image: url(../../img/Bitmap52.png);
+      background-repeat: no-repeat;
+    }
+    &__bg-two {
+      background-image: url(../../img/Bitmap53.png);
+      background-repeat: no-repeat;
+    }
+    &__bg-three {
+      background-image: url(../../img/Bitmap54.png);
+      background-repeat: no-repeat;
+    }
+    &__bg-four {
+      background-image: url(../../img/Bitmap55.png);
+      background-repeat: no-repeat;
+    }
+}
+
+.category-link-BMW {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}

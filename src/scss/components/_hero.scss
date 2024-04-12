@@ -1,0 +1,106 @@
+.hero {
+  padding: 30px 0 38px;
+  &__container {
+    column-gap: 28px;
+    @include mobile {
+      display: block;
+    }
+  }
+  &__card {
+    &--primary {
+      grid-column: 4 span;
+    }
+    @include mobile {
+      margin-bottom: 25px;
+
+    }
+  }
+  &__column{
+    grid-column: 4 span;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 0 21px;
+    background-repeat: no-repeat;
+    &--primary {
+      background-image: url(../../img/Bitmap.png);
+    }
+    @include tablet {
+      background-size: cover;
+      padding: 15px 0 10px 10.5px;
+    }
+  }
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36px;
+    color: var(--light-color);
+    margin: 0;
+    @include tablet {
+      font-size: 22px;
+      line-height: 28px;
+
+    }
+  }
+  &__author-link, &__text, &__date{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: -1px;
+    color: var(--light-color);
+    font-family: var(--font-family);
+  }
+  &__info {
+    margin-bottom: 6px;
+  }
+}
+
+.category-link {
+  &:focus {
+    outline: 2px solid var(--manatee-color);
+  }
+  @include hover {
+    color: var(--green-color);
+  }
+  &:active {
+    color: var(--red-color);
+  }
+  padding: 4px 12px;
+  background-color: var(--blue-color);
+  color: var(--light-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: 0px;
+  font-family: var(--font-family);
+  margin-bottom: 106px;
+  max-width: 62px;
+  &--one {
+    margin-bottom: 368px;
+  }
+}
+
+.category-date {
+
+}
+
+
+
+.hero__column-two .hero__card:last-child{
+  background-image: url(../../img/Image_5.png);
+}
+.hero__column-two .hero__card:first-child{
+  background-image: url(../../img/Image_4.png);
+}
+
+.hero__column-one .hero__card:last-child{
+  background-image: url(../../img/Bitmap\ \(2\).png);
+}
+
+.hero__column-one .hero__card:first-child{
+  background-image: url(../../img/Bitmap\ \(1\).png);
+}
+

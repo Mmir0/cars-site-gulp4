@@ -1,0 +1,75 @@
+.header {
+  background-color: var(--dark-color);
+
+  padding: 34px 0;
+
+  @include mobile {
+    padding: 17px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile {
+      flex-direction: column;
+      row-gap: 15px;
+    }
+  }
+
+  &__logo {
+    transition: transform .5s ease-in-out;
+    &:focus {
+      color: var(--manatee-color);
+    }
+    @include hover {
+      transform: scale(1.1);
+    }
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    @include mobile {
+      column-gap: 28px;
+    }
+  }
+  &__link {
+    color: var(--light-color);
+    line-height: -1px;
+    &focus {
+      outline: 2px solid var(--manatee-color);
+    }
+    @include hover {
+      color: var(--green-color);
+    }
+  }
+
+  &__btn {
+    transition: transform .5s ease-in-out;
+    padding: 8px 0;
+    &:focus {
+      color: var(--manatee-color);
+    }
+    @include hover {
+      transform: scale(120%);
+    }
+  }
+}
+
+.header__logo.focus-visible {
+  outline: 1px solid var(--gray-color);
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+@include mobile {
+  .header__container .header__btn {
+
+  }
+}
+
